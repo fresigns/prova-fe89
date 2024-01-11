@@ -1,0 +1,21 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap'); */
+
+html, body{
+    padding: 0;
+    margin: 0;
+    /* font-family: 'Roboto', sans-serif; */
+}
+
+/* top button */
+
+#topBtn {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    /* rounded */
+    width: 60px; /* Larghezza del cerchio */
+    height: 60px; /* Altezza del cerchio */
+    border-radius: 50%; /* Rende il bottone un cerchio */
+}

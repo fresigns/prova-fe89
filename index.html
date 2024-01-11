@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+   <link rel="stylesheet" href="css/style.css">
+
+   <title>Rest Countries Site</title>
+</head>
+<body>
+<!-- header -->
+    <header class="text-center">
+        <div class="bg-body-tertiary p-4 rounded">
+            <h1>Rest Countries API</h1>
+                <p class="lead">European Region</p>
+        </div>
+    </header>
+
+<!-- sezione main-->
+        <main class="container mt-4">
+            <div class="mb-3">
+                <div class="container-btn">
+                    <!-- name -->
+                    <button class="btn btn-primary  me-2" onclick="orderByName()">Order by Name</button>
+                    <!-- population -->
+                    <button class="btn btn-primary  me-2" onclick="orderByPopulation()">Order by Population</button>
+                    <!-- subregion -->
+                    <button type="button" class="btn btn-primary dropdown-toggle me-2" data-bs-toggle="dropdown">
+                        Filter by Subregion
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" onclick="filterBySubregion('Northern Europe')">Northern Europe</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="filterBySubregion('Southern Europe')">Southern Europe</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="filterBySubregion('Western Europe')">Western Europe</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="filterBySubregion('Eastern Europe')">Eastern Europe</a></li>
+                        </ul>
+                    </button>
+                    <!-- reset filters -->
+                    <button type="button" class="btn btn-secondary  me-2" onclick="resetFilters()">Reset Filters</button>
+                </div><!-- fine container-btn -->
+            </div>
+
+            <!-- div cards: -->
+            <div id="countries-list" class="row row-cols-1 row-cols-md-3 g-4"></div>
+        </main>
+
+<!-- sezione footer -->
+        <footer style="margin-top: 30px;">
+            <div class="d-flex flex-column flex-sm-row justify-content-center py-4 bg-body-tertiary">
+                <p>&copy; 2024 Corso Front End - Francesca E.</p>
+            </div>
+        </footer>
+
+<!-- top button -->
+        <button id="topBtn" class="btn btn-primary" onclick="scrollToTop()">
+            <b>TOP</b>
+        </button>
+
+<!-- file js -->
+   <script src="app.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
